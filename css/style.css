@@ -1,0 +1,30 @@
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2em;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+div{
+    border: 3px solid rgb(90, 65, 19);
+}
+
+.container{
+    background-color: rgb(212, 171, 120);
+}
+
+#nome-empresa{
+    color: brown;
+}
