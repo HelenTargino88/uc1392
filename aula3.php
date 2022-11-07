@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-</html>
-    <head>
-        <!-- <meta http-equiv="refresh" content="1"> -->
-    </head>
-
-
 <?php
+
 // "/* */" //comentário de bloco
 // "//" comentário de linha
 // "#" comentário de linha
@@ -81,9 +74,69 @@ $nota = array(9,8,7,4);
     echo($nota[$i]);
     echo("<br>");
 }
+
+
+
+//declaração de matrizes
+$pessoas = array(
+    'FS2345'=>(['Well','Professor']),
+    'DFG346'=>(['Nath','Gatinha']),
+    '85U41R'=>(['Ellen','Fofa']),
+    '63D23A'=>(['Helen','Garota'])
+);
+if(isset($_GET['enviar'])){ //se o usúario clicar no botão
+    $id_frm = $_GET['id'];
+    $nome_frm = $_GET['nome'];
+    $descri_frm = $_GET['descricao'];
+    $pessoas += [$id_frm => ([$nome_frm, $descri_frm])];
+}
+
 ?>
 
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- <meta http-equiv="refresh" content="1"> -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <br>
+        <form action="#" method="get">
+            <label for="id">
+                Id
+                <input type="text" name="id" placeholder="Entre com o Id" required>
+            </label><br>
+            
+            <label for="nome">
+                Nome
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+            </label><br>
+            
+            <label for="descricao">
+                Descrição
+                <input type="text" placeholder="Digite a descrição" name="descricao">
+            </label><br>            
+            <button type="submit" name="enviar" id="btn-enviar">Enviar</button>
+        </form>
+        <table class="tabelinha">
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <tr>
+                <td>10Y08</td>
+                <td>Nathalia</td>
+                <td>Linda</td>
+            </tr>
+            <?php foreach ($pessoas as $id => $nome) {?>
+            <tr>
+                <td><?php echo($id);?></td>
+                <td><?php echo($nome[0]);?></td>
+                <td><?php echo($nome[1]);?></td>
+            </tr>
+            <?php } ?>
+        </table>
+    </body>
+</html>
 
 
 

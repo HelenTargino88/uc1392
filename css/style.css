@@ -1,4 +1,7 @@
+@import url(reset.css);
+
 html{
+    margin-left: 15px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -27,4 +30,22 @@ div{
 
 #nome-empresa{
     color: brown;
+}
+
+.tabelinha th, td{
+    border:0.5px solid rgb(255, 181, 181);
+}
+
+.tabelinha th,td{
+    padding: 10px 20px 15px 5px;
+}
+
+.tabelinha{border: 2px solid rgb(255, 181, 181);}
+
+th{font-weight: 700;}
+
+input{margin-bottom: 10px;}
+
+#btn-enviar{
+    margin-bottom: 20px;
 }
