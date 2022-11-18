@@ -23,6 +23,24 @@ $num_linhas = $lista->rowCount();
     </style>
 </head>
 <body>
+    <section class="formulario">
+        <form action="#" method="post">
+            <div hidden>
+                <label for="cod-func">
+                    Código
+                    <input type="text" name="cod-func">
+                </label>
+            </div>
+            <div>
+                <label for="cod-func">
+                    Código
+                    <input type="text" name="cod-func">
+                </label>
+            </div>
+        </form>
+    </section>
+
+
     <table>
         <thead>
             <th>ID</th>
