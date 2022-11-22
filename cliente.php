@@ -35,22 +35,22 @@ if (isset($_GET['codedit']))
 if (isset($_GET['codarq']))
 {
     $queryArq = "update cliente set deleted = now() where cod_cliente=".$_GET['codarq'];
-    $cliente = $pdo ->query($queryArq)->fetch();
+    $cliente = $pdo->query($queryArq)->fetch();
     header('location: cliente.php');
 }
 
-// restaurar o clinete
+// restaurar o cliente
 if (isset($_GET['codres']))
 {
-    $queryArq = "update cliente set deleted = null where cod_cliente".$_GET['codres'];
-    $cliente = $pdo->query($queryArq)->fetch();
+    $queryRes = "update cliente set deleted = null where cod_cliente=".$_GET['codres'];
+    $cliente = $pdo->query($queryRes)->fetch();
     header('location: cliente.php');
 }
 
 //excluir definitivamente(LGPD)
 if (isset($_GET['codexc']))
 {
-    $queryExc = "delete * from cliente where cod_cliente=".$_GET['codexc'];
+    $queryExc = "delete from cliente where cod_cliente=".$_GET['codexc'];
     $cliente = $pdo->query($queryExc)->fetch();
     header('location: cliente.php');
 }
@@ -149,6 +149,7 @@ if (isset($_POST['alterar']))
             <th hidden>Cod</th>
             <th>Nome</th>
             <th>CPF</th>
+            <th>Arquivado em</th>
             <th colspan="2">Ações</th>
         </thead>
         <tbody>

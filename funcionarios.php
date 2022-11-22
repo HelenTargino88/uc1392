@@ -31,12 +31,6 @@ $num_linhas = $lista->rowCount();
                     <input type="text" name="cod-func">
                 </label>
             </div>
-            <div>
-                <label for="cod-func">
-                    Código
-                    <input type="text" name="cod-func">
-                </label>
-            </div>
         </form>
     </section>
 
