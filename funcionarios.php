@@ -16,11 +16,6 @@ $num_linhas = $lista->rowCount();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funcionários <?php echo '('.$num_linhas.')' ?></title>
-    <style>
-        td{
-            border-bottom: 1px solid red;
-        }
-    </style>
 </head>
 <body>
     <section class="formulario">
@@ -33,9 +28,7 @@ $num_linhas = $lista->rowCount();
             </div>
         </form>
     </section>
-
-
-    <table>
+    <table class:"table table-gray table-hover">
         <thead>
             <th>ID</th>
             <th>Nome</th>
@@ -49,7 +42,7 @@ $num_linhas = $lista->rowCount();
             <th>VA</th>
             <th>VT</th>
         </thead>
-        <TBOdy>
+        <tbody>
             <?php do { ?>
                 <tr>
                     <td><?php echo $linha['cod_func']?></td>
@@ -65,7 +58,7 @@ $num_linhas = $lista->rowCount();
                     <td><?php echo $linha['vt']?></td>
                 </tr>
             <?php } while ($linha = $lista->fetch());?>
-        </TBOdy>
+        </tbody>
     </table>
 </body>
 </html>
