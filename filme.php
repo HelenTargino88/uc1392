@@ -76,13 +76,13 @@ if(isset($_POST['enviar']))
                 <input type="text" name="pais_origem">
                 </label>
             </div>
-            <div class="mb-3">
+            <div class="row g-3 mb-3">
                 <label for="duracao">
                     Duração
                 <input type="text" name="duracao">
                 </label>
-            </div class="mb-3">
-            <div class="mb-3">
+            </div>
+            <div class="row g-3 mb-3">
                 <label for="preco">
                     Preço
                 <input type="text" name="preco">
@@ -99,7 +99,7 @@ if(isset($_POST['enviar']))
             </div>
         </form>
     </section>
-    <table>
+    <table class="table table-striped table-info table-hover";>
         <thead>
             <th>Cod</th>
             <th>Título</th>
